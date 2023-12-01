@@ -8,21 +8,27 @@
             Complete toda la informacion solicitada para crear un nuevo proyecto, debes estar seguro que toda la nformación ingresada sea correcta antes de guardar el proyecto de lo contrario no podras modificarla
         </p>
     </div>    
+    
     {% if form.errors %}
     <p style="color:red;">Por favor revisa este campo</p>
     {% endif %}
+    <div id="caja_formulario">
+        
+        <form action="" method="POST">{% csrf_token %}
+            <div id="titulo_formulario">
+                <h3>Datos del lugar del empleo</h3>
+            </div>
 
-    <form action="" method="POST">{% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <div id="caja_botones">
+                <input type="submit" value="Cancelar"> 
+                <input type="submit" value="Salvar"> 
+            </div>
 
-        <table>
-            {{form.as_table}}
-        </table>
-        <input type="submit" value="Cancelar"> 
-        <input type="submit" value="Salvar"> 
-
-
-    </form>
-
+        </form>
+    </div>
 </body>
 
 {% endblock %}
