@@ -1,0 +1,28 @@
+{% extends "calidadAguaApp/base.html" %}
+{% load static %}
+{% block content %}
+<body>
+    <div id="proyecto_nuevo">
+        <h2>Proyecto Nuevo - Ficha para el monitoreo de la Calidad del Agua</h2>
+        <p>
+            Complete toda la informacion solicitada para crear un nuevo proyecto, debes estar seguro que toda la nformación ingresada sea correcta antes de guardar el proyecto de lo contrario no podras modificarla
+        </p>
+    </div>    
+    {% if form.errors %}
+    <p style="color:red;">Por favor revisa este campo</p>
+    {% endif %}
+
+    <form action="" method="POST">{% csrf_token %}
+
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit" value="Cancelar"> 
+        <input type="submit" value="Salvar"> 
+
+
+    </form>
+
+</body>
+
+{% endblock %}
