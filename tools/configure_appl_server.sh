@@ -8,3 +8,4 @@ sudo dnf install -y zlib zlib-devel bzip2-devel openssl-devel sqlite-devel readl
 curl https://pyenv.run | bash
 
 
+pyenv exec pip install
