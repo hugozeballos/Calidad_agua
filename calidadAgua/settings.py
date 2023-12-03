@@ -79,8 +79,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'calidad_agua',
         'USER': 'postgres',
-        'PASSWORD': 'panconmante',
-        'HOST': '127.0.0.1',
+        'PASSWORD': 'pachirisu',
+        'HOST': 'atabey-public-dev.caw2poj3nut4.us-east-1.rds.amazonaws.com',
         'DATABASE_PORT': '5432', 
     }
 }
