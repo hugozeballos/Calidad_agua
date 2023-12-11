@@ -12,22 +12,22 @@ class Indicadores(models.Model):
     solidos_suspendidos_totales=models.DecimalField(max_digits=5, decimal_places=2)
     temperatura=models.DecimalField(max_digits=5, decimal_places=2)
     transparencia=models.DecimalField(max_digits=5, decimal_places=2)
-    conductividad_unidad_medida = models.CharField(max_length=3)
-    muestra_id = models.CharField(max_length=3)
-    orp_unidad_medida = models.CharField(max_length=3)
-    oxigeno_disuelto_unidad_medida = models.CharField(max_length=3)
-    ph_unidad_medida = models.CharField(max_length=3)
-    porcentaje_oxigeno_unidad_medida = models.CharField(max_length=3)
-    profundidad_unidad_medida = models.CharField(max_length=3)
-    salinidad_unidad_medida = models.CharField(max_length=3)
-    solidos_suspendidos_totales_unidad_medida = models.CharField(max_length=3)
-    temperatura_unidad_medida = models.CharField(max_length=3)
-    transparencia_unidad_medida = models.CharField(max_length=3)
-    id_indicadores = models.CharField(max_length=3)
-    
+    conductividad_unidad_medida = models.CharField(max_length=10)
+    muestra_id = models.CharField(max_length=10)
+    orp_unidad_medida = models.CharField(max_length=10)
+    oxigeno_disuelto_unidad_medida = models.CharField(max_length=10)
+    ph_unidad_medida = models.CharField(max_length=10)
+    porcentaje_oxigeno_unidad_medida = models.CharField(max_length=10)
+    profundidad_unidad_medida = models.CharField(max_length=10)
+    salinidad_unidad_medida = models.CharField(max_length=10)
+    solidos_suspendidos_totales_unidad_medida = models.CharField(max_length=10)
+    temperatura_unidad_medida = models.CharField(max_length=10)
+    transparencia_unidad_medida = models.CharField(max_length=10)
+    id_indicadores = models.CharField(max_length=10)
+
 class proyectos(models.Model):
-    latitud=models.DecimalField(max_digits=10, decimal_places=9)
-    longitud=models.DecimalField(max_digits=10, decimal_places=9)
+    latitud=models.DecimalField(max_digits=11, decimal_places=9)
+    longitud=models.DecimalField(max_digits=11, decimal_places=9)
     fecha=models.DateField()
     descripcion = models.CharField(max_length=50)
     empresa = models.CharField(max_length=50)
@@ -59,7 +59,7 @@ class usuarios_proyectos(models.Model):
 class proyectos_muestra(models.Model):
     muestra_id = models.CharField(max_length=50)
     proyecto_id = models.CharField(max_length=50)
-    
+
 class muestras(models.Model):
     latitud=models.DecimalField(max_digits=10, decimal_places=9)
     longitud=models.DecimalField(max_digits=10, decimal_places=9)
@@ -68,5 +68,6 @@ class muestras(models.Model):
     indicador_id = models.CharField(max_length=50)
     laboratorio = models.CharField(max_length=50)
     proyecto_id = models.CharField(max_length=50)
+    calidad = models.CharField(max_length=50)
     id_muestras = models.CharField(max_length=50)
 
